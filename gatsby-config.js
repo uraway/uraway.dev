@@ -1,12 +1,12 @@
 module.exports = {
-  pathPrefix: "/leonids",
+  pathPrefix: "/",
   siteMetadata: {
-    title: `Leonids`,
+    title: `uraway`,
     author: {
       name: `@uraway`,
       summary: `web dev`,
     },
-    description: `A simple, fixed sidebar two columns Gatsby.js blog starter.`,
+    description: `web dev`,
     siteUrl: `https://uraway.github.io`,
     social: {
       twitter: `uraway_`,

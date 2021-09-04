@@ -1,13 +1,15 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
 
-import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import ShareButtons from "../components/share-buttons.js"
 import { rhythm, scale } from "../utils/typography"
 
 const BlogPostTemplate = ({ data, pageContext, location }) => {
   const post = data.markdownRemark
+  const url = typeof window !== "undefined" ? window.location.href : ""
+  const description = post.description ? post.description : post.excerpt
   // const siteTitle = data.site.siteMetadata.title
   const { previous, next } = pageContext
 
@@ -35,6 +37,25 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
           >
             {post.frontmatter.date}
           </p>
+          <p>
+            {post.frontmatter.tags.map(tag => (
+              <Link
+                key={tag}
+                to={`/tags/${tag}`}
+                style={{
+                  border: "1px solid #ccc",
+                  borderRadius: "2px",
+                  textDecoration: "none",
+                  padding: "2px 6px",
+                  marginRight: "0.5rem",
+                  color: "#ccc",
+                  boxShadow: "none",
+                }}
+              >
+                {tag}
+              </Link>
+            ))}
+          </p>
         </header>
         <section dangerouslySetInnerHTML={{ __html: post.html }} />
         <hr
@@ -43,7 +64,11 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
           }}
         />
         <footer>
-          <Bio />
+          <ShareButtons
+            url={url}
+            title={post.title}
+            description={description}
+          />
         </footer>
       </article>
 
@@ -94,6 +119,7 @@ export const pageQuery = graphql`
         title
         date(formatString: "MMMM DD, YYYY")
         description
+        tags
       }
     }
   }

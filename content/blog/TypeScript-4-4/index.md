@@ -2,7 +2,7 @@
 title: TypeScript 4.4
 date: "2021-09-04T07:26:03.284Z"
 description: ""
-categories: [typescript]
+tags: [typescript]
 comments: true
 ---
 
@@ -13,12 +13,10 @@ ref: https://devblogs.microsoft.com/typescript/announcing-typescript-4-4/
 以前の TypeScript では、type guard の判別式を変数に代入した場合、その判別式は機能しない。
 
 ```ts twoslash
-// @errors: 2304
 function foo(arg: unknown) {
   const argIsString = typeof arg === "string"
   if (argIsString) {
     console.log(arg.toUpperCase())
-    //              ~~~~~~~~~~~
     // Error! Property 'toUpperCase' does not exist on type 'unknown'.
   }
 }
