@@ -1,6 +1,8 @@
 import React from "react"
 import { Link } from "gatsby"
 import { ThemeToggler } from "gatsby-plugin-dark-mode"
+import { Twitter, GitHub } from "react-feather"
+
 import { scale } from "../utils/typography"
 
 import Footer from "./footer"
@@ -78,6 +80,14 @@ const Layout = ({ location, title, children }) => {
           {title}
         </Link>
       </h2>
+      <div style={{ display: "flex", gap: "2rem", marginTop: '1rem' }}>
+        <a href="https://twitter.com/uraway_" target="_blank">
+          <Twitter />
+        </a>
+        <a href="https://github.com/uraway" target="_blank">
+          <GitHub />
+        </a>
+      </div>
     </>
   )
 
