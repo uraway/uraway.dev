@@ -1,7 +1,7 @@
 ---
 title: TypeScript 4.4
-date: "2021-09-04T07:26:03.284Z"
-description: ""
+date: '2021-09-04T07:26:03.284Z'
+description: ''
 tags: [typescript]
 comments: true
 ---
@@ -14,9 +14,9 @@ ref: https://devblogs.microsoft.com/typescript/announcing-typescript-4-4/
 
 ```ts twoslash
 function foo(arg: unknown) {
-  const argIsString = typeof arg === "string"
+  const argIsString = typeof arg === 'string';
   if (argIsString) {
-    console.log(arg.toUpperCase())
+    console.log(arg.toUpperCase());
     // Error! Property 'toUpperCase' does not exist on type 'unknown'.
   }
 }
@@ -30,14 +30,14 @@ TypeScript 4.4 からはシンボルとテンプレート文字列パターン�
 
 ```ts twoslash
 interface Colors {
-  [sym: symbol]: number
+  [sym: symbol]: number;
 }
 
-const red = Symbol("red")
+const red = Symbol('red');
 
-let colors: Colors = {}
+let colors: Colors = {};
 
-colors[red] = 255
+colors[red] = 255;
 ```
 
 ```ts twoslash
@@ -75,8 +75,8 @@ try {
 
 ```ts twoslash
 interface Person {
-  name: string
-  age?: number
+  name: string;
+  age?: number;
 }
 ```
 
@@ -84,8 +84,8 @@ interface Person {
 
 ```ts twoslash
 interface Person {
-  name: string
-  age?: number | undefined
+  name: string;
+  age?: number | undefined;
 }
 ```
 
@@ -95,14 +95,14 @@ interface Person {
 // @exactOptionalPropertyTypes
 // @errors: 2322
 interface Person {
-  name: string
-  age?: number
+  name: string;
+  age?: number;
 }
 
 const p: Person = {
-  name: "Daniel",
+  name: 'Daniel',
   age: undefined,
-}
+};
 ```
 
 ### static ブロック
@@ -111,6 +111,6 @@ const p: Person = {
 
 ```ts twoslash
 class Foo {
-  static count = 0
+  static count = 0;
 }
 ```

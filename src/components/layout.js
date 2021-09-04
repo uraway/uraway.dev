@@ -1,28 +1,28 @@
-import React from "react"
-import { Link } from "gatsby"
-import { ThemeToggler } from "gatsby-plugin-dark-mode"
-import { Twitter, GitHub, Rss } from "react-feather"
+import React from 'react';
+import { Link } from 'gatsby';
+import { ThemeToggler } from 'gatsby-plugin-dark-mode';
+import { Twitter, GitHub, Rss } from 'react-feather';
 
-import { scale } from "../utils/typography"
+import { scale } from '../utils/typography';
 
-import Footer from "./footer"
-import "./global.css"
-import "./twoslash.css"
+import Footer from './footer';
+import './global.css';
+import './twoslash.css';
 
 const Layout = ({ location, title, children }) => {
   const toggle = (
     <ThemeToggler>
       {({ toggleTheme, theme }) => {
-        const isDarkMode = theme === "dark"
+        const isDarkMode = theme === 'dark';
         if (theme == null) {
-          return null
+          return null;
         }
 
         return (
           <button
             aria-label="theme-switch"
             className="leading-none p-1"
-            onClick={() => toggleTheme(isDarkMode ? "light" : "dark")}
+            onClick={() => toggleTheme(isDarkMode ? 'light' : 'dark')}
           >
             {isDarkMode ? (
               <svg
@@ -54,10 +54,10 @@ const Layout = ({ location, title, children }) => {
               </svg>
             )}
           </button>
-        )
+        );
       }}
     </ThemeToggler>
-  )
+  );
 
   const header = (
     <>
@@ -80,27 +80,31 @@ const Layout = ({ location, title, children }) => {
           {title}
         </Link>
       </h2>
-      <div style={{ display: "flex", gap: "2rem", marginTop: '1rem' }}>
-        <a href="https://twitter.com/uraway_" target="_blank">
+      <div style={{ display: 'flex', gap: '2rem', marginTop: '1rem' }}>
+        <a href="https://twitter.com/uraway_" target="_blank" rel="noreferrer">
           <Twitter />
         </a>
-        <a href="https://github.com/uraway" target="_blank">
+        <a href="https://github.com/uraway" target="_blank" rel="noreferrer">
           <GitHub />
         </a>
-        <a href="https://feedly.com/i/subscription/feed%2Fhttps%3A%2F%2Furaway.github.io%2Frss.xml" target="_blank">
+        <a
+          href="https://feedly.com/i/subscription/feed%2Fhttps%3A%2F%2Furaway.github.io%2Frss.xml"
+          target="_blank"
+          rel="noreferrer"
+        >
           <Rss />
         </a>
       </div>
     </>
-  )
+  );
 
   return (
     <div
       style={{
-        backgroundColor: "var(--bg)",
-        color: "var(--textNormal)",
-        transition: "color 0.2s ease-out, background 0.2s ease-out",
-        minHeight: "100vh",
+        backgroundColor: 'var(--bg)',
+        color: 'var(--textNormal)',
+        transition: 'color 0.2s ease-out, background 0.2s ease-out',
+        minHeight: '100vh',
       }}
     >
       <div className="sidebar">
@@ -117,7 +121,7 @@ const Layout = ({ location, title, children }) => {
         <Footer />
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Layout
+export default Layout;

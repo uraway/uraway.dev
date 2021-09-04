@@ -1,12 +1,12 @@
-const path = require(`path`)
-const { createFilePath } = require(`gatsby-source-filesystem`)
-const kebab = require('lodash.kebabcase')
+const path = require(`path`);
+const { createFilePath } = require(`gatsby-source-filesystem`);
+const kebab = require('lodash.kebabcase');
 
 exports.createPages = async ({ graphql, actions }) => {
-  const { createPage } = actions
+  const { createPage } = actions;
 
-  const blogPost = path.resolve(`./src/templates/blog-post.tsx`)
-  const tagTemplate = path.resolve(`./src/templates/tag.tsx`)
+  const blogPost = path.resolve(`./src/templates/blog-post.tsx`);
+  const tagTemplate = path.resolve(`./src/templates/tag.tsx`);
   const result = await graphql(
     `
       {
@@ -32,18 +32,18 @@ exports.createPages = async ({ graphql, actions }) => {
         }
       }
     `
-  )
+  );
 
   if (result.errors) {
-    throw result.errors
+    throw result.errors;
   }
 
   // Create blog posts pages.
-  const posts = result.data.postsRemark.edges
+  const posts = result.data.postsRemark.edges;
 
   posts.forEach((post, index) => {
-    const previous = index === posts.length - 1 ? null : posts[index + 1].node
-    const next = index === 0 ? null : posts[index - 1].node
+    const previous = index === posts.length - 1 ? null : posts[index + 1].node;
+    const next = index === 0 ? null : posts[index - 1].node;
 
     createPage({
       path: post.node.fields.slug,
@@ -53,50 +53,50 @@ exports.createPages = async ({ graphql, actions }) => {
         previous,
         next,
       },
-    })
-  })
+    });
+  });
 
   // Create blog post list pages
-  const postsPerPage = 5
-  const numPages = Math.ceil(posts.length / postsPerPage)
+  const postsPerPage = 5;
+  const numPages = Math.ceil(posts.length / postsPerPage);
 
   Array.from({ length: numPages }).forEach((_, i) => {
     createPage({
       path: i === 0 ? `/` : `/${i + 1}`,
-      component: path.resolve("./src/templates/blog-list.tsx"),
+      component: path.resolve('./src/templates/blog-list.tsx'),
       context: {
         limit: postsPerPage,
         skip: i * postsPerPage,
         numPages,
         currentPage: i + 1,
       },
-    })
-  })
+    });
+  });
 
   // Create meta tag pages
-  const tags = result.data.tagsGroup.group
+  const tags = result.data.tagsGroup.group;
   // Make tag pages
-  tags.forEach(tag => {
-    console.log(tag)
+  tags.forEach((tag) => {
+    console.log(tag);
     createPage({
       path: `/tags/${kebab(tag.fieldValue)}/`,
       component: tagTemplate,
       context: {
         tag: tag.fieldValue,
       },
-    })
-  })
-}
+    });
+  });
+};
 
 exports.onCreateNode = ({ node, actions, getNode }) => {
-  const { createNodeField } = actions
+  const { createNodeField } = actions;
 
   if (node.internal.type === `MarkdownRemark`) {
-    const value = createFilePath({ node, getNode })
+    const value = createFilePath({ node, getNode });
     createNodeField({
       name: `slug`,
       node,
       value,
-    })
+    });
   }
-}
+};

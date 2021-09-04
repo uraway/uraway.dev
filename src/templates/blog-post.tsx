@@ -1,17 +1,17 @@
-import React from "react"
-import { Link, graphql } from "gatsby"
+import React from 'react';
+import { Link, graphql } from 'gatsby';
 
-import Layout from "../components/layout"
-import SEO from "../components/seo"
-import ShareButtons from "../components/share-buttons.js"
-import { rhythm, scale } from "../utils/typography"
+import Layout from '../components/layout';
+import SEO from '../components/seo';
+import ShareButtons from '../components/share-buttons.js';
+import { rhythm, scale } from '../utils/typography';
 
 const BlogPostTemplate = ({ data, pageContext, location }) => {
-  const post = data.markdownRemark
-  const url = typeof window !== "undefined" ? window.location.href : ""
-  const description = post.description ? post.description : post.excerpt
+  const post = data.markdownRemark;
+  const url = typeof window !== 'undefined' ? window.location.href : '';
+  const description = post.description ? post.description : post.excerpt;
   // const siteTitle = data.site.siteMetadata.title
-  const { previous, next } = pageContext
+  const { previous, next } = pageContext;
 
   return (
     <Layout location={location} title="Home">
@@ -38,18 +38,18 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
             {post.frontmatter.date}
           </p>
           <p>
-            {post.frontmatter.tags.map(tag => (
+            {post.frontmatter.tags.map((tag) => (
               <Link
                 key={tag}
                 to={`/tags/${tag}`}
                 style={{
-                  border: "1px solid #ccc",
-                  borderRadius: "2px",
-                  textDecoration: "none",
-                  padding: "2px 6px",
-                  marginRight: "0.5rem",
-                  color: "#ccc",
-                  boxShadow: "none",
+                  border: '1px solid #ccc',
+                  borderRadius: '2px',
+                  textDecoration: 'none',
+                  padding: '2px 6px',
+                  marginRight: '0.5rem',
+                  color: '#ccc',
+                  boxShadow: 'none',
                 }}
               >
                 {tag}
@@ -99,10 +99,10 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
         </ul>
       </nav>
     </Layout>
-  )
-}
+  );
+};
 
-export default BlogPostTemplate
+export default BlogPostTemplate;
 
 export const pageQuery = graphql`
   query BlogPostBySlug($slug: String!) {
@@ -123,4 +123,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;

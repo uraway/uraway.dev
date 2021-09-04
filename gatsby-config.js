@@ -1,5 +1,5 @@
 module.exports = {
-  pathPrefix: "/",
+  pathPrefix: '/',
   siteMetadata: {
     title: `uraway`,
     author: {
@@ -11,7 +11,7 @@ module.exports = {
     social: {
       twitter: `uraway_`,
     },
-    defaultImage: "images/bg.jpeg",
+    defaultImage: 'images/bg.jpeg',
   },
   plugins: [
     {
@@ -47,10 +47,10 @@ module.exports = {
           `gatsby-remark-copy-linked-files`,
           `gatsby-remark-smartypants`,
           {
-            resolve: "gatsby-remark-shiki-twoslash",
-              options: {
-                theme: "nord",
-              }
+            resolve: 'gatsby-remark-shiki-twoslash',
+            options: {
+              theme: 'nord',
+            },
           },
         ],
       },
@@ -86,7 +86,7 @@ module.exports = {
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     `gatsby-plugin-offline`,
-    "gatsby-plugin-dark-mode",
+    'gatsby-plugin-dark-mode',
     `gatsby-plugin-postcss`,
   ],
-}
+};

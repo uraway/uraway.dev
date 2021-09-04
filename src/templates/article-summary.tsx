@@ -1,6 +1,6 @@
-import React from "react"
-import { Link } from "gatsby"
-import { rhythm } from "../utils/typography"
+import React from 'react';
+import { Link } from 'gatsby';
+import { rhythm } from '../utils/typography';
 
 const ArticleSummary = ({ node, title }) => {
   return (
@@ -25,7 +25,7 @@ const ArticleSummary = ({ node, title }) => {
         />
       </section>
     </article>
-  )
-}
+  );
+};
 
-export default ArticleSummary
+export default ArticleSummary;
