@@ -1,7 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
 import { ThemeToggler } from "gatsby-plugin-dark-mode"
-import { Twitter, GitHub } from "react-feather"
+import { Twitter, GitHub, Rss } from "react-feather"
 
 import { scale } from "../utils/typography"
 
@@ -86,6 +86,9 @@ const Layout = ({ location, title, children }) => {
         </a>
         <a href="https://github.com/uraway" target="_blank">
           <GitHub />
+        </a>
+        <a href="https://feedly.com/i/subscription/feed%2Fhttps%3A%2F%2Furaway.github.io%2Frss.xml" target="_blank">
+          <Rss />
         </a>
       </div>
     </>
