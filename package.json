@@ -3,9 +3,9 @@
   "private": true,
   "description": "A starter for a blog powered by Gatsby and Markdown",
   "version": "0.1.0",
-  "author": "Renyuan Zou <zourenyuan@gmail.com>",
+  "author": "uraway <masato.uraway@gmail.com>",
   "bugs": {
-    "url": "https://github.com/renyuanz/leonids/issues"
+    "url": "https://github.com/uraway/uraway.github.io/issues"
   },
   "dependencies": {
     "gatsby": "^2.24.47",
@@ -42,7 +42,7 @@
     "prettier": "2.0.5",
     "tailwindcss": "^1.6.2"
   },
-  "homepage": "https://github.com/renyuanz/leonids#readme",
+  "homepage": "https://github.com/uraway/uraway.github.io#readme",
   "keywords": [
     "gatsby"
   ],
@@ -50,7 +50,7 @@
   "main": "n/a",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/renyuanz/leonids.git"
+    "url": "git+https://github.com/uraway/uraway.github.io.git"
   },
   "scripts": {
     "build": "gatsby build",

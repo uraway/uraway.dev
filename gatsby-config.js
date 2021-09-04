@@ -3,13 +3,13 @@ module.exports = {
   siteMetadata: {
     title: `Leonids`,
     author: {
-      name: `@ry_zou`,
+      name: `@uraway`,
       summary: `web dev`,
     },
     description: `A simple, fixed sidebar two columns Gatsby.js blog starter.`,
-    siteUrl: `https://renyuanz.github.io/leonids`,
+    siteUrl: `https://uraway.github.io`,
     social: {
-      twitter: `ry_zou`,
+      twitter: `uraway_`,
     },
     defaultImage: "images/bg.jpeg",
   },
@@ -52,18 +52,18 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    {
-      resolve: `gatsby-plugin-google-analytics`,
-      options: {
-        trackingId: `UA-62251910-1`,
-      },
-    },
+    // {
+    //   resolve: `gatsby-plugin-google-analytics`,
+    //   options: {
+    //     trackingId: `UA-62251910-1`,
+    //   },
+    // },
     `gatsby-plugin-feed`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Ryz`,
-        short_name: `Ryz`,
+        name: `uraway`,
+        short_name: `uraway`,
         start_url: `/`,
         background_color: `#ffffff`,
         theme_color: `#663399`,
