@@ -60,9 +60,10 @@ let option: Options = {
 `catch`句の変数の型を`any`から`unknown`に変更するオプション
 
 ```ts twoslash
+// @useUnknownInCatchVariables
 try {
 } catch (err) {
-  // unknown
+  //     ^?
 }
 ```
 
@@ -91,15 +92,16 @@ interface Person {
 `exactOptionalPropertyTypes`オプション下では、オプショナルプロパティは`undefined`とのユニオンタイプを追加しない。存在しないプロパティと区別される。
 
 ```ts twoslash
-// @errors: 2304
+// @exactOptionalPropertyTypes
+// @errors: 2322
 interface Person {
   name: string
-  age?: number | undefined
+  age?: number
 }
 
 const p: Person = {
   name: "Daniel",
-  age: undefined, // Type 'undefined' is not assignable to type 'number'.(2322)
+  age: undefined,
 }
 ```
 
@@ -108,7 +110,6 @@ const p: Person = {
 [ECMAScript プロポーザル](https://github.com/tc39/proposal-class-static-block#ecmascript-class-static-initialization-blocks)の static ブロックをサポート:
 
 ```ts twoslash
-// @errors: 2304
 class Foo {
   static count = 0
 }
