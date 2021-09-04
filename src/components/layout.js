@@ -5,6 +5,7 @@ import { scale } from "../utils/typography"
 
 import Footer from "./footer"
 import "./global.css"
+import "./twoslash.css"
 
 const Layout = ({ location, title, children }) => {
   const toggle = (
