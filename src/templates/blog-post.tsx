@@ -1,24 +1,27 @@
 import React from 'react';
-import { Link, graphql } from 'gatsby';
+import { Link, graphql, PageProps } from 'gatsby';
 
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 import ShareButtons from '../components/share-buttons.js';
 import { rhythm, scale } from '../utils/typography';
 
-const BlogPostTemplate = ({ data, pageContext, location }) => {
+const BlogPostTemplate = ({
+  data,
+  pageContext,
+  location,
+}: PageProps<GatsbyTypes.BlogPostQuery, GatsbyTypes.MarkdownRemarkEdge>) => {
   const post = data.markdownRemark;
   const url = typeof window !== 'undefined' ? window.location.href : '';
-  const description = post.description ? post.description : post.excerpt;
+  const { title, date, tags } = post.frontmatter;
+  const description = post.frontmatter.description
+    ? post.frontmatter.description
+    : post.excerpt;
   // const siteTitle = data.site.siteMetadata.title
   const { previous, next } = pageContext;
-
   return (
     <Layout location={location} title="Home">
-      <SEO
-        title={post.frontmatter.title}
-        description={post.frontmatter.description || post.excerpt}
-      />
+      <SEO title={title} description={description} />
       <article>
         <header>
           <h1
@@ -26,7 +29,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
               marginBottom: 0,
             }}
           >
-            {post.frontmatter.title}
+            {title}
           </h1>
           <p
             style={{
@@ -35,10 +38,10 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
               marginBottom: rhythm(1),
             }}
           >
-            {post.frontmatter.date}
+            {date}
           </p>
           <p>
-            {post.frontmatter.tags.map((tag) => (
+            {tags.map((tag) => (
               <Link
                 key={tag}
                 to={`/tags/${tag}`}
@@ -64,11 +67,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
           }}
         />
         <footer>
-          <ShareButtons
-            url={url}
-            title={post.title}
-            description={description}
-          />
+          <ShareButtons url={url} title={title} description={description} />
         </footer>
       </article>
 
@@ -105,7 +104,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
 export default BlogPostTemplate;
 
 export const pageQuery = graphql`
-  query BlogPostBySlug($slug: String!) {
+  query BlogPost($slug: String!) {
     site {
       siteMetadata {
         title

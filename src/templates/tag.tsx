@@ -1,9 +1,13 @@
 import React from 'react';
-import { graphql } from 'gatsby';
+import { graphql, PageProps } from 'gatsby';
 import Layout from '../components/layout';
 import ArticleSummary from './article-summary';
 
-const Tag = ({ pageContext, data, location }) => {
+const Tag = ({
+  pageContext,
+  data,
+  location,
+}: PageProps<GatsbyTypes.TagQuery, GatsbyTypes.SitePageContext>) => {
   const siteTitle = data.site.siteMetadata.title;
   const { tag } = pageContext;
   const { edges, totalCount } = data.allMarkdownRemark;
@@ -26,7 +30,7 @@ const Tag = ({ pageContext, data, location }) => {
 export default Tag;
 
 export const pageQuery = graphql`
-  query($tag: String) {
+  query Tag($tag: String) {
     site {
       siteMetadata {
         title

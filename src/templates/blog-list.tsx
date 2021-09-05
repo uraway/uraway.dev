@@ -1,43 +1,14 @@
-// Gatsby supports TypeScript natively!
 import React from 'react';
 import { PageProps, Link, graphql } from 'gatsby';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 import { rhythm } from '../utils/typography';
 
-type PageContext = {
-  currentPage: number;
-  numPages: number;
-};
-type Data = {
-  site: {
-    siteMetadata: {
-      title: string;
-    };
-  };
-  allMarkdownRemark: {
-    edges: {
-      node: {
-        excerpt: string;
-        frontmatter: {
-          title: string;
-          date: string;
-          description: string;
-          tags: string[];
-        };
-        fields: {
-          slug: string;
-        };
-      };
-    }[];
-  };
-};
-
 const BlogIndex = ({
   data,
   location,
   pageContext,
-}: PageProps<Data, PageContext>) => {
+}: PageProps<GatsbyTypes.BlogListQuery, GatsbyTypes.SitePageContext>) => {
   const siteTitle = data.site.siteMetadata.title;
   const posts = data.allMarkdownRemark.edges;
   const { currentPage, numPages } = pageContext;
@@ -110,7 +81,7 @@ const BlogIndex = ({
 export default BlogIndex;
 
 export const pageQuery = graphql`
-  query blogPageQuery($skip: Int!, $limit: Int!) {
+  query BlogList($skip: Int!, $limit: Int!) {
     site {
       siteMetadata {
         title

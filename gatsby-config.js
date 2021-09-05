@@ -92,5 +92,6 @@ module.exports = {
     `gatsby-plugin-offline`,
     'gatsby-plugin-dark-mode',
     `gatsby-plugin-postcss`,
+    `gatsby-plugin-typegen`,
   ],
 };
