@@ -15,6 +15,16 @@ module.exports = {
   },
   plugins: [
     {
+      resolve: `gatsby-plugin-google-gtag`,
+      options: {
+        trackingIds: [
+          'G-2X5XXR86H9', // Google Analytics / GA
+          // 'AW-CONVERSION_ID', // Google Ads / Adwords / AW
+          // 'DC-FLOODIGHT_ID', // Marketing Platform advertising products (Display & Video 360, Search Ads 360, and Campaign Manager)
+        ],
+      },
+    },
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         path: `${__dirname}/content/blog`,
@@ -57,12 +67,6 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    // {
-    //   resolve: `gatsby-plugin-google-analytics`,
-    //   options: {
-    //     trackingId: `UA-62251910-1`,
-    //   },
-    // },
     `gatsby-plugin-feed`,
     {
       resolve: `gatsby-plugin-manifest`,
