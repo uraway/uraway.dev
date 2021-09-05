@@ -43,6 +43,7 @@
     "typography-theme-wordpress-2016": "^0.16.19"
   },
   "devDependencies": {
+    "eslint-config-react-app": "^6.0.0",
     "prettier": "2.0.5",
     "tailwindcss": "^1.6.2"
   },
@@ -60,6 +61,7 @@
     "build": "gatsby build",
     "dev": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
+    "lint": "eslint . && prettier --check \"**/*.{js,jsx,json,md}\"",
     "start": "npm run dev",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
