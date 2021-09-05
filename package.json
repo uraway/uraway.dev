@@ -44,7 +44,7 @@
   },
   "devDependencies": {
     "eslint-config-react-app": "6.0.0",
-    "prettier": "2.0.5",
+    "prettier": "2.3.2",
     "tailwindcss": "2.2.9"
   },
   "homepage": "https://github.com/uraway/uraway.github.io#readme",
