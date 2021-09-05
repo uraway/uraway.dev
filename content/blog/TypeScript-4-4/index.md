@@ -42,16 +42,16 @@ colors[red] = 255;
 
 ```ts twoslash
 interface Options {
-    width?: number;
-    height?: number;
-    // 任意の`data-`から始まる文字列をプロパティのキーとして使用できる
-    [optName: `data-${string}`]: unknown;
+  width?: number;
+  height?: number;
+  // 任意の`data-`から始まる文字列をプロパティのキーとして使用できる
+  [optName: `data-${string}`]: unknown;
 }
 
 let option: Options = {
-    width: 100,
-    height: 100,
-    "data-blah": true
+  width: 100,
+  height: 100,
+  'data-blah': true,
 };
 ```
 
