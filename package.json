@@ -35,12 +35,12 @@
     "react-feather": "2.0.9",
     "react-helmet": "6.1.0",
     "react-share": "4.4.0",
-    "react-typography": "^0.16.19",
+    "react-typography": "0.16.20",
     "typeface-merriweather": "0.0.72",
     "typeface-montserrat": "0.0.75",
-    "typography": "^0.16.19",
-    "typography-theme-github": "^0.16.19",
-    "typography-theme-wordpress-2016": "^0.16.19"
+    "typography": "0.16.21",
+    "typography-theme-github": "0.16.19",
+    "typography-theme-wordpress-2016": "0.16.19"
   },
   "devDependencies": {
     "eslint-config-react-app": "6.0.0",
