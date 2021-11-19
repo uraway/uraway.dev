@@ -93,7 +93,7 @@ interface Person {
 
 ```ts twoslash
 // @exactOptionalPropertyTypes
-// @errors: 2322
+// @errors: 2375
 interface Person {
   name: string;
   age?: number;
