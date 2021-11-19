@@ -17,6 +17,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - run: yarn install --frozen-lockfile
+      - run: yarn build
       - uses: enriikke/gatsby-gh-pages-action@v2
         with:
           access-token: ${{ secrets.ACCESS_TOKEN }}
