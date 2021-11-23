@@ -88,7 +88,7 @@ const Layout = ({ location, title, children }) => {
           <GitHub />
         </a>
         <a
-          href="https://feedly.com/i/subscription/feed%2Fhttps%3A%2F%2Furaway.github.io%2Frss.xml"
+          href="https://feedly.com/i/subscription/feed%2Fhttp%3A%2F%2Furaway.github.io%2Frss.xml"
           target="_blank"
           rel="noreferrer"
         >
