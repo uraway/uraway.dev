@@ -327,14 +327,14 @@ type SitePage = Node & {
 };
 
 type SitePageContext = {
-  readonly slug: Maybe<Scalars['String']>;
-  readonly previous: Maybe<SitePageContextPrevious>;
-  readonly next: Maybe<SitePageContextNext>;
   readonly limit: Maybe<Scalars['Int']>;
   readonly skip: Maybe<Scalars['Int']>;
   readonly numPages: Maybe<Scalars['Int']>;
   readonly currentPage: Maybe<Scalars['Int']>;
   readonly tag: Maybe<Scalars['String']>;
+  readonly slug: Maybe<Scalars['String']>;
+  readonly previous: Maybe<SitePageContextPrevious>;
+  readonly next: Maybe<SitePageContextNext>;
 };
 
 type SitePageContextPrevious = {
@@ -2675,14 +2675,14 @@ type SitePluginPackageJsonPeerDependenciesFilterInput = {
 };
 
 type SitePageContextFilterInput = {
-  readonly slug: Maybe<StringQueryOperatorInput>;
-  readonly previous: Maybe<SitePageContextPreviousFilterInput>;
-  readonly next: Maybe<SitePageContextNextFilterInput>;
   readonly limit: Maybe<IntQueryOperatorInput>;
   readonly skip: Maybe<IntQueryOperatorInput>;
   readonly numPages: Maybe<IntQueryOperatorInput>;
   readonly currentPage: Maybe<IntQueryOperatorInput>;
   readonly tag: Maybe<StringQueryOperatorInput>;
+  readonly slug: Maybe<StringQueryOperatorInput>;
+  readonly previous: Maybe<SitePageContextPreviousFilterInput>;
+  readonly next: Maybe<SitePageContextNextFilterInput>;
 };
 
 type SitePageContextPreviousFilterInput = {
@@ -2965,16 +2965,16 @@ type SitePageFieldsEnum =
   | 'internal.mediaType'
   | 'internal.owner'
   | 'internal.type'
-  | 'context.slug'
-  | 'context.previous.fields.slug'
-  | 'context.previous.frontmatter.tags'
-  | 'context.next.fields.slug'
-  | 'context.next.frontmatter.tags'
   | 'context.limit'
   | 'context.skip'
   | 'context.numPages'
   | 'context.currentPage'
-  | 'context.tag';
+  | 'context.tag'
+  | 'context.slug'
+  | 'context.previous.fields.slug'
+  | 'context.previous.frontmatter.tags'
+  | 'context.next.fields.slug'
+  | 'context.next.frontmatter.tags';
 
 type SitePageGroupConnection = {
   readonly totalCount: Scalars['Int'];
