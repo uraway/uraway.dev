@@ -8,7 +8,7 @@ comments: true
 
 ref: https://github.com/Microsoft/TypeScript/issues/27024#issuecomment-421529650
 
-ある程度型パズルに慣れている方は、型同士が同じか判定する型と聞いて次のように思いつくのではないでしょうか：
+ある程度型パズルに慣れている方は、型同士が同じかどうか判定する型と聞いて次のように思いつくのではないでしょうか：
 
 ```ts twoslash
 type Equals<X, Y> = [X] extends [Y] ? ([Y] extends [X] ? true : false) : false;
