@@ -401,6 +401,8 @@ type SitePluginPluginOptions = {
   readonly disableBgImage: Maybe<Scalars['Boolean']>;
   readonly wrapperStyle: Maybe<Scalars['String']>;
   readonly theme: Maybe<Scalars['String']>;
+  readonly vfsRoot: Maybe<Scalars['String']>;
+  readonly customTags: Maybe<ReadonlyArray<Maybe<Scalars['String']>>>;
   readonly base64Width: Maybe<Scalars['Int']>;
   readonly stripMetadata: Maybe<Scalars['Boolean']>;
   readonly defaultQuality: Maybe<Scalars['Int']>;
@@ -453,6 +455,8 @@ type SitePluginPluginOptionsPluginsPluginOptions = {
   readonly disableBgImage: Maybe<Scalars['Boolean']>;
   readonly wrapperStyle: Maybe<Scalars['String']>;
   readonly theme: Maybe<Scalars['String']>;
+  readonly vfsRoot: Maybe<Scalars['String']>;
+  readonly customTags: Maybe<ReadonlyArray<Maybe<Scalars['String']>>>;
 };
 
 type SitePluginPluginOptionsFeeds = {
@@ -2600,6 +2604,8 @@ type SitePluginPluginOptionsFilterInput = {
   readonly disableBgImage: Maybe<BooleanQueryOperatorInput>;
   readonly wrapperStyle: Maybe<StringQueryOperatorInput>;
   readonly theme: Maybe<StringQueryOperatorInput>;
+  readonly vfsRoot: Maybe<StringQueryOperatorInput>;
+  readonly customTags: Maybe<StringQueryOperatorInput>;
   readonly base64Width: Maybe<IntQueryOperatorInput>;
   readonly stripMetadata: Maybe<BooleanQueryOperatorInput>;
   readonly defaultQuality: Maybe<IntQueryOperatorInput>;
@@ -2656,6 +2662,8 @@ type SitePluginPluginOptionsPluginsPluginOptionsFilterInput = {
   readonly disableBgImage: Maybe<BooleanQueryOperatorInput>;
   readonly wrapperStyle: Maybe<StringQueryOperatorInput>;
   readonly theme: Maybe<StringQueryOperatorInput>;
+  readonly vfsRoot: Maybe<StringQueryOperatorInput>;
+  readonly customTags: Maybe<StringQueryOperatorInput>;
 };
 
 type SitePluginPluginOptionsFeedsFilterListInput = {
@@ -2888,6 +2896,8 @@ type SitePageFieldsEnum =
   | 'pluginCreator.pluginOptions.disableBgImage'
   | 'pluginCreator.pluginOptions.wrapperStyle'
   | 'pluginCreator.pluginOptions.theme'
+  | 'pluginCreator.pluginOptions.vfsRoot'
+  | 'pluginCreator.pluginOptions.customTags'
   | 'pluginCreator.pluginOptions.base64Width'
   | 'pluginCreator.pluginOptions.stripMetadata'
   | 'pluginCreator.pluginOptions.defaultQuality'
@@ -3105,6 +3115,8 @@ type SitePluginFieldsEnum =
   | 'pluginOptions.plugins.pluginOptions.disableBgImage'
   | 'pluginOptions.plugins.pluginOptions.wrapperStyle'
   | 'pluginOptions.plugins.pluginOptions.theme'
+  | 'pluginOptions.plugins.pluginOptions.vfsRoot'
+  | 'pluginOptions.plugins.pluginOptions.customTags'
   | 'pluginOptions.plugins.nodeAPIs'
   | 'pluginOptions.plugins.browserAPIs'
   | 'pluginOptions.plugins.pluginFilepath'
@@ -3126,6 +3138,8 @@ type SitePluginFieldsEnum =
   | 'pluginOptions.disableBgImage'
   | 'pluginOptions.wrapperStyle'
   | 'pluginOptions.theme'
+  | 'pluginOptions.vfsRoot'
+  | 'pluginOptions.customTags'
   | 'pluginOptions.base64Width'
   | 'pluginOptions.stripMetadata'
   | 'pluginOptions.defaultQuality'
