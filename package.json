@@ -57,7 +57,7 @@
     "eslint-plugin-react-hooks": "4.3.0",
     "prettier": "2.4.1",
     "tailwindcss": "2.2.19",
-    "typescript": "4.5.2"
+    "typescript": "4.5.3"
   },
   "homepage": "https://github.com/uraway/uraway.github.io#readme",
   "keywords": [
