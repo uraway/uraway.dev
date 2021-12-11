@@ -137,7 +137,7 @@ export class BaseType {}
 4.5 では、個々の名前付き`import`に`type`修飾子を付けることができるようになりました。
 
 ```ts twoslash
-import { someFunc, type BaseType } from "./some-module.js";
+import { someFunc, type BaseType } from './some-module.js';
 
 export class Thing implements BaseType {}
 
@@ -152,17 +152,19 @@ export class BaseType {}
 
 ```ts twoslash
 class Person {
-    #name: string;
-    constructor(name: string) {
-        this.#name = name;
-    }
+  #name: string;
+  constructor(name: string) {
+    this.#name = name;
+  }
 
-    equals(other: unknown) {
-        return other &&
-            typeof other === "object" &&
-            #name in other && // <- this is new!
-            this.#name === other.#name;
-    }
+  equals(other: unknown) {
+    return (
+      other &&
+      typeof other === 'object' &&
+      #name in other && // <- this is new!
+      this.#name === other.#name
+    );
+  }
 }
 ```
 
@@ -172,10 +174,11 @@ class Person {
 
 ```ts twoslash
 // @resolveJsonModule: true
-import obj from "./something.json" assert { type: "json" };
+import obj from './something.json' assert { type: 'json' };
 
 // @filename: something.json
-{}
+{
+}
 ```
 
 ### JSDoc における const アサーションとデフォルト型引数
