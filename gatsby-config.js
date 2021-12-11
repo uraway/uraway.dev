@@ -7,7 +7,7 @@ module.exports = {
       summary: `web dev`,
     },
     description: `web dev`,
-    siteUrl: `https://uraway.github.io`,
+    siteUrl: `https://uraway.dev`,
     social: {
       twitter: `uraway_`,
     },
@@ -115,7 +115,7 @@ module.exports = {
               }
             `,
             output: '/rss.xml',
-            title: 'uraway.github.io',
+            title: 'uraway.dev',
           },
         ],
       },

@@ -99,7 +99,7 @@ const Layout = ({ location, title, children }) => {
         </a>
         <a
           aria-label="feedly subscription"
-          href="https://feedly.com/i/subscription/feed%2Fhttp%3A%2F%2Furaway.github.io%2Frss.xml"
+          href="https://feedly.com/i/subscription/feed%2Fhttp%3A%2F%2Furaway.dev%2Frss.xml"
           target="_blank"
           rel="noreferrer"
         >
