@@ -145,5 +145,6 @@ module.exports = {
     'gatsby-plugin-dark-mode',
     `gatsby-plugin-postcss`,
     `gatsby-plugin-typegen`,
+    `gatsby-plugin-sitemap`,
   ],
 };
