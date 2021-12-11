@@ -81,13 +81,24 @@ const Layout = ({ location, title, children }) => {
         </Link>
       </h2>
       <div style={{ display: 'flex', gap: '2rem', marginTop: '1rem' }}>
-        <a href="https://twitter.com/uraway_" target="_blank" rel="noreferrer">
+        <a
+          aria-label="twitter account"
+          href="https://twitter.com/uraway_"
+          target="_blank"
+          rel="noreferrer"
+        >
           <Twitter />
         </a>
-        <a href="https://github.com/uraway" target="_blank" rel="noreferrer">
+        <a
+          aria-label="github account"
+          href="https://github.com/uraway"
+          target="_blank"
+          rel="noreferrer"
+        >
           <GitHub />
         </a>
         <a
+          aria-label="feedly subscription"
           href="https://feedly.com/i/subscription/feed%2Fhttp%3A%2F%2Furaway.github.io%2Frss.xml"
           target="_blank"
           rel="noreferrer"
