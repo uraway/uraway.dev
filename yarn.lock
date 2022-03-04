@@ -7670,12 +7670,12 @@ gatsby-remark-responsive-iframe@5.9.0:
     lodash "^4.17.21"
     unist-util-visit "^2.0.3"
 
-gatsby-remark-shiki-twoslash@3.0.33:
-  version "3.0.33"
-  resolved "https://registry.yarnpkg.com/gatsby-remark-shiki-twoslash/-/gatsby-remark-shiki-twoslash-3.0.33.tgz#55479ba20b1aba6b0548c618456fff0a340e503f"
-  integrity sha512-+xYzldXAhr5Y/8H/EFbKo9nOPIt0qaWGdYiuczlw72x5ezqDVjNksp4dLROR4SzcnKfOaRpbdpwi1fIqY1WcYw==
+gatsby-remark-shiki-twoslash@3.0.34:
+  version "3.0.34"
+  resolved "https://registry.yarnpkg.com/gatsby-remark-shiki-twoslash/-/gatsby-remark-shiki-twoslash-3.0.34.tgz#c45582f463a4c0561806c45aaa47649fbe31eb6a"
+  integrity sha512-JNsDUyEKU2xehFrydPhXZGutBR3pOcTTvqnOed4Anj3jNUIPAuNd7BKKjW2L+CAoq2KB8t22Sc7C8a6Pg538uw==
   dependencies:
-    remark-shiki-twoslash "3.0.8"
+    remark-shiki-twoslash "3.0.9"
     typescript ">3"
     unist-util-visit "^2.0.0"
 
@@ -12095,10 +12095,10 @@ remark-retext@^4.0.0:
   dependencies:
     mdast-util-to-nlcst "^4.0.0"
 
-remark-shiki-twoslash@3.0.8:
-  version "3.0.8"
-  resolved "https://registry.yarnpkg.com/remark-shiki-twoslash/-/remark-shiki-twoslash-3.0.8.tgz#c78823cfc7ff1c0b6c680f54ac132d05d6a6b656"
-  integrity sha512-eQaiUzS/bcoKdVH6e9Pk9mTeUuTnJOf1CVpHV6ae2yGjia5uqYPAdfZPGebh/ln/ZjBn9Gw68G+1OyWgXk5dQw==
+remark-shiki-twoslash@3.0.9:
+  version "3.0.9"
+  resolved "https://registry.yarnpkg.com/remark-shiki-twoslash/-/remark-shiki-twoslash-3.0.9.tgz#5c10793733fdf3dd5b2de50f1c220d3ec1f0ff92"
+  integrity sha512-durv6l16O8F5XY0b0WduewxlOnnc1B83fxWFDOfGX9ehvHw+xcPJbjurDy8m99EpvC5Q/kUG4fbSSK/HwpYxCw==
   dependencies:
     "@typescript/twoslash" "3.1.0"
     "@typescript/vfs" "1.3.4"
