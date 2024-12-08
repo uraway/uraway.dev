@@ -7650,12 +7650,12 @@ gatsby-remark-responsive-iframe@5.10.0:
     lodash "^4.17.21"
     unist-util-visit "^2.0.3"
 
-gatsby-remark-shiki-twoslash@3.0.34:
-  version "3.0.34"
-  resolved "https://registry.yarnpkg.com/gatsby-remark-shiki-twoslash/-/gatsby-remark-shiki-twoslash-3.0.34.tgz#c45582f463a4c0561806c45aaa47649fbe31eb6a"
-  integrity sha512-JNsDUyEKU2xehFrydPhXZGutBR3pOcTTvqnOed4Anj3jNUIPAuNd7BKKjW2L+CAoq2KB8t22Sc7C8a6Pg538uw==
+gatsby-remark-shiki-twoslash@3.0.38:
+  version "3.0.38"
+  resolved "https://registry.yarnpkg.com/gatsby-remark-shiki-twoslash/-/gatsby-remark-shiki-twoslash-3.0.38.tgz#e2f2cbf6307a959b100b09d7954529520d6e11f0"
+  integrity sha512-byrghW3OGnPoHBuTrC+OPgS38ivr2vulztvtAwYAake+i0vp9wto1YGn0wrauA4a6xf7EHsHmv7hkDkIww8cow==
   dependencies:
-    remark-shiki-twoslash "3.0.9"
+    remark-shiki-twoslash "3.1.3"
     typescript ">3"
     unist-util-visit "^2.0.0"
 
@@ -9747,13 +9747,6 @@ lru-cache@^4.0.0:
     pseudomap "^1.0.2"
     yallist "^2.1.2"
 
-lru-cache@^5.1.1:
-  version "5.1.1"
-  resolved "https://registry.yarnpkg.com/lru-cache/-/lru-cache-5.1.1.tgz#1da27e6710271947695daf6848e847f01d84b920"
-  integrity sha512-KpNARQA3Iwv+jTA0utUVVbrh+Jlrr1Fv0e56GGzAFOXN7dk/FviaDW8LHmK52DlcH4WP2n6gI8vN1aesBFgo9w==
-  dependencies:
-    yallist "^3.0.2"
-
 lru-cache@^6.0.0:
   version "6.0.0"
   resolved "https://registry.yarnpkg.com/lru-cache/-/lru-cache-6.0.0.tgz#6d6fe6570ebd96aaf90fcad1dafa3b2566db3a94"
@@ -10690,13 +10683,6 @@ onetime@^5.1.0, onetime@^5.1.2:
   integrity sha512-kbpaSSGJTWdAY5KPVeMOKXSrPtr8C8C7wodJbcsd51jRnmD+GZu8Y0VoU6Dm5Z4vWr0Ig/1NKuWRKf7j5aaYSg==
   dependencies:
     mimic-fn "^2.1.0"
-
-onigasm@^2.2.5:
-  version "2.2.5"
-  resolved "https://registry.yarnpkg.com/onigasm/-/onigasm-2.2.5.tgz#cc4d2a79a0fa0b64caec1f4c7ea367585a676892"
-  integrity sha512-F+th54mPc0l1lp1ZcFMyL/jTs2Tlq4SqIHKIXGZOR/VkHkF9A7Fr5rRr5+ZG/lWeRsyrClLYRq7s/yFQ/XhWCA==
-  dependencies:
-    lru-cache "^5.1.1"
 
 open@^7.0.2, open@^7.0.3:
   version "7.4.2"
@@ -12072,19 +12058,19 @@ remark-retext@^4.0.0:
   dependencies:
     mdast-util-to-nlcst "^4.0.0"
 
-remark-shiki-twoslash@3.0.9:
-  version "3.0.9"
-  resolved "https://registry.yarnpkg.com/remark-shiki-twoslash/-/remark-shiki-twoslash-3.0.9.tgz#5c10793733fdf3dd5b2de50f1c220d3ec1f0ff92"
-  integrity sha512-durv6l16O8F5XY0b0WduewxlOnnc1B83fxWFDOfGX9ehvHw+xcPJbjurDy8m99EpvC5Q/kUG4fbSSK/HwpYxCw==
+remark-shiki-twoslash@3.1.3:
+  version "3.1.3"
+  resolved "https://registry.yarnpkg.com/remark-shiki-twoslash/-/remark-shiki-twoslash-3.1.3.tgz#0edc4929a68ca24da2cdd80d662feb7811a6194b"
+  integrity sha512-4e8OH3ySOCw5wUbDcPszokOKjKuebOqlP2WlySvC7ITBOq27BiGsFlq+FNWhxppZ+JzhTWah4gQrnMjX3KDbAQ==
   dependencies:
+    "@types/unist" "^2.0.0"
     "@typescript/twoslash" "3.1.0"
     "@typescript/vfs" "1.3.4"
     fenceparser "^1.1.0"
     regenerator-runtime "^0.13.7"
-    shiki "0.9.11"
-    shiki-twoslash "3.0.2"
+    shiki "0.10.1"
+    shiki-twoslash "3.1.2"
     tslib "2.1.0"
-    typescript ">3"
     unist-util-visit "^2.0.0"
 
 remark-stringify@^9.0.0, remark-stringify@^9.0.1:
@@ -12561,23 +12547,23 @@ shell-quote@1.7.2:
   resolved "https://registry.yarnpkg.com/shell-quote/-/shell-quote-1.7.2.tgz#67a7d02c76c9da24f99d20808fcaded0e0e04be2"
   integrity sha512-mRz/m/JVscCrkMyPqHc/bczi3OQHkLTqXHEFu0zDhK/qfv3UcOA4SVmRCLmos4bhjr9ekVQubj/R7waKapmiQg==
 
-shiki-twoslash@3.0.2:
-  version "3.0.2"
-  resolved "https://registry.yarnpkg.com/shiki-twoslash/-/shiki-twoslash-3.0.2.tgz#9fa4b17f2982560cc1abfdc8db43b474eae80069"
-  integrity sha512-2VxUykJ0ETWxageixkfKcMjK5mpMYxJU3uhAoscTZnfX/iq+bWnEpLZnsrcErMJrD85orxABMw5w/GoO4nUiqg==
+shiki-twoslash@3.1.2:
+  version "3.1.2"
+  resolved "https://registry.yarnpkg.com/shiki-twoslash/-/shiki-twoslash-3.1.2.tgz#fba4a5bf6f055d96543691c1585b04528fe4c486"
+  integrity sha512-JBcRIIizi+exIA/OUhYkV6jtyeZco0ykCkIRd5sgwIt1Pm4pz+maoaRZpm6SkhPwvif4fCA7xOtJOykhpIV64Q==
   dependencies:
     "@typescript/twoslash" "3.1.0"
     "@typescript/vfs" "1.3.4"
-    shiki "0.9.11"
-    typescript ">3"
+    fenceparser "^1.1.0"
+    shiki "0.10.1"
 
-shiki@0.9.11:
-  version "0.9.11"
-  resolved "https://registry.yarnpkg.com/shiki/-/shiki-0.9.11.tgz#07d75dab2abb6dc12a01f79a397cb1c391fa22d8"
-  integrity sha512-tjruNTLFhU0hruCPoJP0y+B9LKOmcqUhTpxn7pcJB3fa+04gFChuEmxmrUfOJ7ZO6Jd+HwMnDHgY3lv3Tqonuw==
+shiki@0.10.1:
+  version "0.10.1"
+  resolved "https://registry.yarnpkg.com/shiki/-/shiki-0.10.1.tgz#6f9a16205a823b56c072d0f1a0bcd0f2646bef14"
+  integrity sha512-VsY7QJVzU51j5o1+DguUd+6vmCmZ5v/6gYu4vyYAhzjuNQU6P/vmSy4uQaOhvje031qQMiW0d2BwgMH52vqMng==
   dependencies:
     jsonc-parser "^3.0.0"
-    onigasm "^2.2.5"
+    vscode-oniguruma "^1.6.1"
     vscode-textmate "5.2.0"
 
 side-channel@^1.0.4:
@@ -13992,6 +13978,11 @@ vfile@^4.0.0:
     unist-util-stringify-position "^2.0.0"
     vfile-message "^2.0.0"
 
+vscode-oniguruma@^1.6.1:
+  version "1.7.0"
+  resolved "https://registry.yarnpkg.com/vscode-oniguruma/-/vscode-oniguruma-1.7.0.tgz#439bfad8fe71abd7798338d1cd3dc53a8beea94b"
+  integrity sha512-L9WMGRfrjOhgHSdOYgCt/yRMsXzLDJSL7BPrOZt73gU0iWO4mpqzqQzOz5srxqTvMBaR0XZTSrVWo4j55Rc6cA==
+
 vscode-textmate@5.2.0:
   version "5.2.0"
   resolved "https://registry.yarnpkg.com/vscode-textmate/-/vscode-textmate-5.2.0.tgz#01f01760a391e8222fe4f33fbccbd1ad71aed74e"
@@ -14418,11 +14409,6 @@ yallist@^2.0.0, yallist@^2.1.2:
   version "2.1.2"
   resolved "https://registry.yarnpkg.com/yallist/-/yallist-2.1.2.tgz#1c11f9218f076089a47dd512f93c6699a6a81d52"
   integrity sha1-HBH5IY8HYImkfdUS+TxmmaaoHVI=
-
-yallist@^3.0.2:
-  version "3.1.1"
-  resolved "https://registry.yarnpkg.com/yallist/-/yallist-3.1.1.tgz#dbb7daf9bfd8bac9ab45ebf602b8cbad0d5d08fd"
-  integrity sha512-a4UGQaWPH59mOXUYnAG2ewncQS4i4F43Tv3JoAM+s2VDAmS9NsK8GpDMLrCHPksFT7h3K6TOoUNn2pb7RoXx4g==
 
 yallist@^4.0.0:
   version "4.0.0"
