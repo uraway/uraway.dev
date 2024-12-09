@@ -37,10 +37,10 @@
     "react-feather": "2.0.9",
     "react-helmet": "6.1.0",
     "react-share": "4.4.0",
-    "react-typography": "0.16.20",
+    "react-typography": "0.16.23",
     "typeface-merriweather": "1.1.13",
     "typeface-montserrat": "1.1.13",
-    "typography": "0.16.21",
+    "typography": "0.16.24",
     "typography-theme-github": "0.16.19",
     "typography-theme-wordpress-2016": "0.16.19"
   },
